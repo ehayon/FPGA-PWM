@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">cclk_IBUF</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">5</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">spi_ss_IBUF,
+spi_mosi_IBUF,
+spi_sck_IBUF,
+avr_tx_IBUF,
+avr_rx_busy_IBUF</arg>
+To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">spi_channel&lt;3&gt;</arg> connected to top level port <arg fmt="%s" index="2">spi_channel&lt;3&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">spi_channel&lt;2&gt;</arg> connected to top level port <arg fmt="%s" index="2">spi_channel&lt;2&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">spi_channel&lt;1&gt;</arg> connected to top level port <arg fmt="%s" index="2">spi_channel&lt;1&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">spi_channel&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">spi_channel&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">spi_miso</arg> connected to top level port <arg fmt="%s" index="2">spi_miso</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">avr_rx</arg> connected to top level port <arg fmt="%s" index="2">avr_rx</arg> has been removed.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
+</msg>
+
+</messages>
+

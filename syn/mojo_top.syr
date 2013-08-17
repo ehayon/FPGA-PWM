@@ -1,0 +1,410 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: mojo_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mojo_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mojo_top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : mojo_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ethan/fpga/Mojo-Base/pwm.v" into library work
+Parsing module <pwm>.
+Analyzing Verilog file "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" into library work
+Parsing module <mojo_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mojo_top>.
+WARNING:HDLCompiler:1127 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 18: Assignment to out1 ignored, since the identifier is never used
+
+Elaborating module <pwm(CTR_LEN=3)>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mojo_top>.
+    Related source file is "/home/ethan/fpga/Mojo-Base/src/mojo_top.v".
+WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 19
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 20
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 21
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 21
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 21
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 21
+    Summary:
+	inferred   6 Tristate(s).
+Unit <mojo_top> synthesized.
+
+Synthesizing Unit <pwm>.
+    Related source file is "/home/ethan/fpga/Mojo-Base/pwm.v".
+        CTR_LEN = 3
+    Found 1-bit register for signal <pwm_q>.
+    Found 3-bit register for signal <ctr_q>.
+    Found 3-bit adder for signal <ctr_d> created at line 33.
+    Found 3-bit comparator greater for signal <pwm_d> created at line 35
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <pwm> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 3-bit adder                                           : 8
+# Registers                                            : 16
+ 1-bit register                                        : 8
+ 3-bit register                                        : 8
+# Comparators                                          : 8
+ 3-bit comparator greater                              : 8
+# Tristates                                            : 6
+ 1-bit tristate buffer                                 : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <pwm>.
+The following registers are absorbed into counter <ctr_q>: 1 register on signal <ctr_q>.
+Unit <pwm> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 8
+ 3-bit up counter                                      : 8
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+# Comparators                                          : 8
+ 3-bit comparator greater                              : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2146 - In block <mojo_top>, Counter <pwm_8/ctr_q> <pwm_7/ctr_q> <pwm_6/ctr_q> <pwm_5/ctr_q> <pwm_4/ctr_q> <pwm_3/ctr_q> <pwm_2/ctr_q> <pwm_1/ctr_q> are equivalent, XST will keep only <pwm_8/ctr_q>.
+WARNING:Xst:1710 - FF/Latch <pwm_1/pwm_q> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <mojo_top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 13
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 3
+#      LUT3                        : 5
+#      VCC                         : 1
+# FlipFlops/Latches                : 10
+#      FD                          : 7
+#      FDR                         : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 15
+#      IBUF                        : 1
+#      OBUF                        : 8
+#      OBUFT                       : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              10  out of  11440     0%  
+ Number of Slice LUTs:                   11  out of   5720     0%  
+    Number used as Logic:                11  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     11
+   Number with an unused Flip Flop:       1  out of     11     9%  
+   Number with an unused LUT:             0  out of     11     0%  
+   Number of fully used LUT-FF pairs:    10  out of     11    90%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  16  out of    102    15%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 10    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.478ns (Maximum Frequency: 403.551MHz)
+   Minimum input arrival time before clock: 3.488ns
+   Maximum output required time after clock: 4.118ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.478ns (frequency: 403.551MHz)
+  Total number of paths / destination ports: 23 / 10
+-------------------------------------------------------------------------
+Delay:               2.478ns (Levels of Logic = 1)
+  Source:            pwm_8/ctr_q_2 (FF)
+  Destination:       pwm_5/pwm_q (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: pwm_8/ctr_q_2 to pwm_5/pwm_q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.525   0.943  pwm_8/ctr_q_2 (pwm_8/ctr_q_2)
+     INV:I->O              1   0.255   0.681  pwm_5/pwm_d1_INV_0 (pwm_5/pwm_d)
+     FD:D                      0.074          pwm_5/pwm_q
+    ----------------------------------------
+    Total                      2.478ns (0.854ns logic, 1.624ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.488ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       pwm_8/ctr_q_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst_n to pwm_8/ctr_q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O              3   0.255   0.765  rst1_INV_0 (rst)
+     FDR:R                     0.459          pwm_8/ctr_q_0
+    ----------------------------------------
+    Total                      3.488ns (2.042ns logic, 1.446ns route)
+                                       (58.5% logic, 41.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            pwm_8/pwm_q (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: pwm_8/pwm_q to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  pwm_8/pwm_q (pwm_8/pwm_q)
+     OBUF:I->O                 2.912          led_7_OBUF (led<7>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.478|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.56 secs
+ 
+--> 
+
+
+Total memory usage is 390720 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

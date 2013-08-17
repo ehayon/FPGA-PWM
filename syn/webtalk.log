@@ -1,0 +1,18 @@
+Release 14.6 - WebTalk (P.68d)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Project Information
+--------------------
+ProjectID=F04BE7BB4526104AA483BCD2B63930B5
+ProjectIteration=18
+
+WebTalk Summary
+----------------
+INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
+
+INFO:WebTalk:8 - WebTalk Install setting is ON.
+INFO:WebTalk:6 - WebTalk User setting is ON.
+
+WARNING:WebTalk:1 - WebTalk could not create a temp directory to store user setting.
+
+INFO:WebTalk:5 - /home/ethan/fpga/Mojo-Base/syn/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/14.6/ISE_DS/ISE/data/reports/webtalk_introduction.html

@@ -1,0 +1,127 @@
+xst -intstyle ise -ifn "/home/justin/workspace/Mojo-Tutorials/Mojo-Base/syn/mojo_top.xst" -ofn "/home/justin/workspace/Mojo-Tutorials/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/justin/workspace/Mojo-Tutorials/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+xst -intstyle ise -ifn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.xst" -ofn "/home/ethan/fpga/Mojo-Base/syn/mojo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ethan/fpga/Mojo-Base/src/mojo.ucf -p xc6slx9-tqg144-2 mojo_top.ngc mojo_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+par -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf 
+bitgen -intstyle ise -f mojo_top.ut mojo_top.ncd 

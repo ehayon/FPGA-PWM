@@ -1,0 +1,2 @@
+verilog work "../pwm.v"
+verilog work "../src/mojo_top.v"
