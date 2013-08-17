@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: mojo_top.prj
@@ -110,6 +110,8 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "/home/ethan/fpga/Mojo-Base/pwm.v" into library work
 Parsing module <pwm>.
+Analyzing Verilog file "/home/ethan/fpga/Mojo-Base/counter.v" into library work
+Parsing module <counter>.
 Analyzing Verilog file "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" into library work
 Parsing module <mojo_top>.
 
@@ -118,17 +120,11 @@ Parsing module <mojo_top>.
 =========================================================================
 
 Elaborating module <mojo_top>.
-WARNING:HDLCompiler:1127 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 18: Assignment to out1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 20: Assignment to out1 ignored, since the identifier is never used
 
-Elaborating module <pwm(CTR_LEN=3)>.
-WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
+Elaborating module <counter>.
+
+Elaborating module <pwm(CTR_LEN=8)>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -142,26 +138,36 @@ WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 19
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 20
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 21
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 21
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 21
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 21
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 21
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 22
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 23
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 23
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 23
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 23
     Summary:
 	inferred   6 Tristate(s).
 Unit <mojo_top> synthesized.
 
-Synthesizing Unit <pwm>.
-    Related source file is "/home/ethan/fpga/Mojo-Base/pwm.v".
-        CTR_LEN = 3
-    Found 1-bit register for signal <pwm_q>.
-    Found 3-bit register for signal <ctr_q>.
-    Found 3-bit adder for signal <ctr_d> created at line 33.
-    Found 3-bit comparator greater for signal <pwm_d> created at line 35
+Synthesizing Unit <counter>.
+    Related source file is "/home/ethan/fpga/Mojo-Base/counter.v".
+    Found 25-bit register for signal <ctr_q>.
+    Found 25-bit adder for signal <ctr_d> created at line 30.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred   4 D-type flip-flop(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <counter> synthesized.
+
+Synthesizing Unit <pwm>.
+    Related source file is "/home/ethan/fpga/Mojo-Base/pwm.v".
+        CTR_LEN = 8
+    Found 1-bit register for signal <pwm_q>.
+    Found 8-bit register for signal <ctr_q>.
+    Found 8-bit adder for signal <ctr_d> created at line 33.
+    Found 8-bit comparator greater for signal <pwm_d> created at line 35
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <pwm> synthesized.
 
@@ -169,13 +175,17 @@ Unit <pwm> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 8
- 3-bit adder                                           : 8
-# Registers                                            : 16
+# Adders/Subtractors                                   : 9
+ 25-bit adder                                          : 1
+ 8-bit adder                                           : 8
+# Registers                                            : 17
  1-bit register                                        : 8
- 3-bit register                                        : 8
+ 25-bit register                                       : 1
+ 8-bit register                                        : 8
 # Comparators                                          : 8
- 3-bit comparator greater                              : 8
+ 8-bit comparator greater                              : 8
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
 
@@ -186,6 +196,10 @@ Macro Statistics
 =========================================================================
 
 
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <ctr_q>: 1 register on signal <ctr_q>.
+Unit <counter> synthesized (advanced).
+
 Synthesizing (advanced) Unit <pwm>.
 The following registers are absorbed into counter <ctr_q>: 1 register on signal <ctr_q>.
 Unit <pwm> synthesized (advanced).
@@ -194,22 +208,40 @@ Unit <pwm> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 8
- 3-bit up counter                                      : 8
+# Counters                                             : 9
+ 25-bit up counter                                     : 1
+ 8-bit up counter                                      : 8
 # Registers                                            : 8
  Flip-Flops                                            : 8
 # Comparators                                          : 8
- 3-bit comparator greater                              : 8
+ 8-bit comparator greater                              : 8
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2146 - In block <mojo_top>, Counter <pwm_generate[7].pwm/ctr_q> <pwm_generate[6].pwm/ctr_q> <pwm_generate[5].pwm/ctr_q> <pwm_generate[4].pwm/ctr_q> <pwm_generate[3].pwm/ctr_q> <pwm_generate[2].pwm/ctr_q> <pwm_generate[1].pwm/ctr_q> <pwm_generate[0].pwm/ctr_q> are equivalent, XST will keep only <pwm_generate[7].pwm/ctr_q>.
-WARNING:Xst:1710 - FF/Latch <pwm_generate[0].pwm/pwm_q> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1989 - Unit <mojo_top>: instances <pwm_generate[0].pwm>, <pwm_generate[1].pwm> of unit <pwm> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mojo_top>: instances <pwm_generate[0].pwm>, <pwm_generate[2].pwm> of unit <pwm> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mojo_top>: instances <pwm_generate[0].pwm>, <pwm_generate[3].pwm> of unit <pwm> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mojo_top>: instances <pwm_generate[0].pwm>, <pwm_generate[4].pwm> of unit <pwm> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mojo_top>: instances <pwm_generate[0].pwm>, <pwm_generate[5].pwm> of unit <pwm> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mojo_top>: instances <pwm_generate[0].pwm>, <pwm_generate[6].pwm> of unit <pwm> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mojo_top>: instances <pwm_generate[0].pwm>, <pwm_generate[7].pwm> of unit <pwm> are equivalent, second instance is removed
 
 Optimizing unit <mojo_top> ...
+
+Optimizing unit <counter> ...
+INFO:Xst:2261 - The FF/Latch <pwm_generate[0].pwm/ctr_q_0> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <pwm_counter/ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <pwm_generate[0].pwm/ctr_q_1> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <pwm_counter/ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <pwm_generate[0].pwm/ctr_q_2> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <pwm_counter/ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <pwm_generate[0].pwm/ctr_q_3> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <pwm_counter/ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <pwm_generate[0].pwm/ctr_q_4> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <pwm_counter/ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <pwm_generate[0].pwm/ctr_q_5> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <pwm_counter/ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <pwm_generate[0].pwm/ctr_q_6> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <pwm_counter/ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <pwm_generate[0].pwm/ctr_q_7> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <pwm_counter/ctr_q_7> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -221,8 +253,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 10
- Flip-Flops                                            : 10
+# Registers                                            : 26
+ Flip-Flops                                            : 26
 
 =========================================================================
 
@@ -245,15 +277,19 @@ Top Level Output File Name         : mojo_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 13
+# BELS                             : 103
 #      GND                         : 1
 #      INV                         : 3
-#      LUT2                        : 3
-#      LUT3                        : 5
+#      LUT1                        : 31
+#      LUT5                        : 4
+#      LUT6                        : 5
+#      MUXCY                       : 31
+#      MUXF7                       : 2
 #      VCC                         : 1
-# FlipFlops/Latches                : 10
-#      FD                          : 7
-#      FDR                         : 3
+#      XORCY                       : 25
+# FlipFlops/Latches                : 26
+#      FD                          : 1
+#      FDR                         : 25
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 15
@@ -268,15 +304,15 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              10  out of  11440     0%  
- Number of Slice LUTs:                   11  out of   5720     0%  
-    Number used as Logic:                11  out of   5720     0%  
+ Number of Slice Registers:              26  out of  11440     0%  
+ Number of Slice LUTs:                   43  out of   5720     0%  
+    Number used as Logic:                43  out of   5720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     11
-   Number with an unused Flip Flop:       1  out of     11     9%  
-   Number with an unused LUT:             0  out of     11     0%  
-   Number of fully used LUT-FF pairs:    10  out of     11    90%  
+ Number of LUT Flip Flop pairs used:     43
+   Number with an unused Flip Flop:      17  out of     43    39%  
+   Number with an unused LUT:             0  out of     43     0%  
+   Number of fully used LUT-FF pairs:    26  out of     43    60%  
    Number of unique control sets:         2
 
 IO Utilization: 
@@ -307,7 +343,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 10    |
+clk                                | BUFGP                  | 26    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -318,9 +354,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 2.478ns (Maximum Frequency: 403.551MHz)
-   Minimum input arrival time before clock: 3.488ns
-   Maximum output required time after clock: 4.118ns
+   Minimum period: 3.999ns (Maximum Frequency: 250.063MHz)
+   Minimum input arrival time before clock: 4.125ns
+   Maximum output required time after clock: 4.380ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -329,64 +365,66 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 2.478ns (frequency: 403.551MHz)
-  Total number of paths / destination ports: 23 / 10
+  Clock period: 3.999ns (frequency: 250.063MHz)
+  Total number of paths / destination ports: 375 / 26
 -------------------------------------------------------------------------
-Delay:               2.478ns (Levels of Logic = 1)
-  Source:            pwm_generate[7].pwm/ctr_q_2 (FF)
-  Destination:       pwm_generate[4].pwm/pwm_q (FF)
+Delay:               3.999ns (Levels of Logic = 3)
+  Source:            pwm_counter/ctr_q_20 (FF)
+  Destination:       pwm_generate[0].pwm/pwm_q (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: pwm_generate[7].pwm/ctr_q_2 to pwm_generate[4].pwm/pwm_q
+  Data Path: pwm_counter/ctr_q_20 to pwm_generate[0].pwm/pwm_q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              8   0.525   0.943  pwm_generate[7].pwm/ctr_q_2 (pwm_generate[7].pwm/ctr_q_2)
-     INV:I->O              1   0.255   0.681  pwm_generate[4].pwm/pwm_d1_INV_0 (pwm_generate[4].pwm/pwm_d)
-     FD:D                      0.074          pwm_generate[4].pwm/pwm_q
+     FDR:C->Q              3   0.525   1.196  pwm_counter/ctr_q_20 (pwm_counter/ctr_q_20)
+     LUT5:I0->O            2   0.254   0.725  pwm_generate[0].pwm/pwm_d11 (pwm_generate[0].pwm/pwm_d11)
+     MUXF7:S->O            1   0.185   0.790  pwm_generate[0].pwm/pwm_d13_SW1 (N9)
+     LUT6:I4->O            1   0.250   0.000  pwm_generate[0].pwm/pwm_d21 (pwm_generate[0].pwm/pwm_d)
+     FD:D                      0.074          pwm_generate[0].pwm/pwm_q
     ----------------------------------------
-    Total                      2.478ns (0.854ns logic, 1.624ns route)
-                                       (34.5% logic, 65.5% route)
+    Total                      3.999ns (1.288ns logic, 2.711ns route)
+                                       (32.2% logic, 67.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 3 / 3
+  Total number of paths / destination ports: 25 / 25
 -------------------------------------------------------------------------
-Offset:              3.488ns (Levels of Logic = 2)
+Offset:              4.125ns (Levels of Logic = 2)
   Source:            rst_n (PAD)
-  Destination:       pwm_generate[7].pwm/ctr_q_0 (FF)
+  Destination:       pwm_generate[0].pwm/ctr_q_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: rst_n to pwm_generate[7].pwm/ctr_q_0
+  Data Path: rst_n to pwm_generate[0].pwm/ctr_q_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
-     INV:I->O              3   0.255   0.765  rst1_INV_0 (rst)
-     FDR:R                     0.459          pwm_generate[7].pwm/ctr_q_0
+     INV:I->O             25   0.255   1.402  rst1_INV_0 (rst)
+     FDR:R                     0.459          pwm_generate[0].pwm/ctr_q_0
     ----------------------------------------
-    Total                      3.488ns (2.042ns logic, 1.446ns route)
-                                       (58.5% logic, 41.5% route)
+    Total                      4.125ns (2.042ns logic, 2.083ns route)
+                                       (49.5% logic, 50.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 7 / 7
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              4.118ns (Levels of Logic = 1)
-  Source:            pwm_generate[7].pwm/pwm_q (FF)
+Offset:              4.380ns (Levels of Logic = 1)
+  Source:            pwm_generate[0].pwm/pwm_q (FF)
   Destination:       led<7> (PAD)
   Source Clock:      clk rising
 
-  Data Path: pwm_generate[7].pwm/pwm_q to led<7>
+  Data Path: pwm_generate[0].pwm/pwm_q to led<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.525   0.681  pwm_generate[7].pwm/pwm_q (pwm_generate[7].pwm/pwm_q)
+     FD:C->Q               8   0.525   0.943  pwm_generate[0].pwm/pwm_q (pwm_generate[0].pwm/pwm_q)
      OBUF:I->O                 2.912          led_7_OBUF (led<7>)
     ----------------------------------------
-    Total                      4.118ns (3.437ns logic, 0.681ns route)
-                                       (83.5% logic, 16.5% route)
+    Total                      4.380ns (3.437ns logic, 0.943ns route)
+                                       (78.5% logic, 21.5% route)
 
 =========================================================================
 
@@ -398,21 +436,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    2.478|         |         |         |
+clk            |    3.999|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 5.29 secs
+Total CPU time to Xst completion: 5.40 secs
  
 --> 
 
 
-Total memory usage is 390728 kilobytes
+Total memory usage is 390884 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   16 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 

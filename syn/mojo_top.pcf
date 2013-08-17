@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Fri Aug 16 22:26:10 2013
+// Written by: Map P.68d on Sat Aug 17 00:01:03 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -19,12 +19,20 @@ COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
 COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
 COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
 COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
-TIMEGRP clk = BEL "pwm_generate[7].pwm/pwm_q" BEL "pwm_generate[6].pwm/pwm_q"
-        BEL "pwm_generate[5].pwm/pwm_q" BEL "pwm_generate[4].pwm/pwm_q" BEL
-        "pwm_generate[3].pwm/pwm_q" BEL "pwm_generate[2].pwm/pwm_q" BEL
-        "pwm_generate[1].pwm/pwm_q" BEL "pwm_generate[7].pwm/ctr_q_0" BEL
-        "pwm_generate[7].pwm/ctr_q_1" BEL "pwm_generate[7].pwm/ctr_q_2" BEL
-        "clk_BUFGP/BUFG";
+TIMEGRP clk = BEL "pwm_generate[0].pwm/pwm_q" BEL
+        "pwm_generate[0].pwm/ctr_q_0" BEL "pwm_generate[0].pwm/ctr_q_1" BEL
+        "pwm_generate[0].pwm/ctr_q_2" BEL "pwm_generate[0].pwm/ctr_q_3" BEL
+        "pwm_generate[0].pwm/ctr_q_4" BEL "pwm_generate[0].pwm/ctr_q_5" BEL
+        "pwm_generate[0].pwm/ctr_q_6" BEL "pwm_generate[0].pwm/ctr_q_7" BEL
+        "pwm_counter/ctr_q_24" BEL "pwm_counter/ctr_q_23" BEL
+        "pwm_counter/ctr_q_22" BEL "pwm_counter/ctr_q_21" BEL
+        "pwm_counter/ctr_q_20" BEL "pwm_counter/ctr_q_19" BEL
+        "pwm_counter/ctr_q_18" BEL "pwm_counter/ctr_q_17" BEL
+        "pwm_counter/ctr_q_16" BEL "pwm_counter/ctr_q_15" BEL
+        "pwm_counter/ctr_q_14" BEL "pwm_counter/ctr_q_13" BEL
+        "pwm_counter/ctr_q_12" BEL "pwm_counter/ctr_q_11" BEL
+        "pwm_counter/ctr_q_10" BEL "pwm_counter/ctr_q_9" BEL
+        "pwm_counter/ctr_q_8" BEL "clk_BUFGP/BUFG";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

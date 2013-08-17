@@ -15,20 +15,29 @@ module mojo_top(
 
 wire rst = ~rst_n;
 
+wire [7:0] compare;
+
 assign out1 = 1'b0;
 assign spi_miso = 1'bz;
 assign avr_rx = 1'bz;
 assign spi_channel = 4'bzzzz;
 
 
+counter pwm_counter (
+	.clk(clk),
+	.rst(rst),
+	.value(compare)
+);
+
+
 genvar i;
 
 generate
 	for(i=0; i < 8; i=i+1) begin: pwm_generate
-		pwm #(.CTR_LEN(3)) pwm (
+		pwm #(.CTR_LEN(8)) pwm (
 			.rst(rst),
 			.clk(clk),
-			.compare(i),
+			.compare(compare),
 			.pwm(led[i])
 		);
 	end
