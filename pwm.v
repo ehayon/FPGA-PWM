@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Ethan Hayon
 // 
 // Create Date:    17:34:21 08/16/2013 
 // Design Name: 
 // Module Name:    pwm 
-// Project Name: 
-// Target Devices: 
+// Project Name: Pulse-Width Modulation
+// Target Devices: Spartan-6 XC6SLX9
 // Tool versions: 
 // Description: 
 //
