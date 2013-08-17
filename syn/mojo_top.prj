@@ -1,3 +1,0 @@
-verilog work "../pwm.v"
-verilog work "../counter.v"
-verilog work "../src/mojo_top.v"

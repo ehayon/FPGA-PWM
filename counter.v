@@ -37,11 +37,13 @@ always @(ctr_q) begin
 end
 
 always @(posedge clk) begin
+	
 	if(rst) begin
 		ctr_q <= 1'b0;
 	end else begin
 		ctr_q <= ctr_d;
 	end
+	
 end
 
 endmodule

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-08-16T18:38:44</DateModified>
+  <DateModified>2013-08-17T00:20:40</DateModified>
   <ModuleName>mojo_top</ModuleName>
-  <SummaryTimeStamp>2013-08-16T14:44:15</SummaryTimeStamp>
+  <SummaryTimeStamp>2013-08-17T00:20:11</SummaryTimeStamp>
   <SavedFilePath>/home/ethan/fpga/Mojo-Base/iseconfig/mojo_top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/ethan/fpga/Mojo-Base/syn/</ImplementationReportsDirectory>
   <DateInitialized>2012-11-08T12:38:20</DateInitialized>
