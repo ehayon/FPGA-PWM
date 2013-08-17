@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Fri Aug 16 20:16:18 2013
+// Written by: Map P.68d on Fri Aug 16 22:26:10 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -19,9 +19,11 @@ COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
 COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
 COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
 COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
-TIMEGRP clk = BEL "pwm_8/pwm_q" BEL "pwm_7/pwm_q" BEL "pwm_6/pwm_q" BEL
-        "pwm_5/pwm_q" BEL "pwm_4/pwm_q" BEL "pwm_3/pwm_q" BEL "pwm_2/pwm_q"
-        BEL "pwm_8/ctr_q_0" BEL "pwm_8/ctr_q_1" BEL "pwm_8/ctr_q_2" BEL
+TIMEGRP clk = BEL "pwm_generate[7].pwm/pwm_q" BEL "pwm_generate[6].pwm/pwm_q"
+        BEL "pwm_generate[5].pwm/pwm_q" BEL "pwm_generate[4].pwm/pwm_q" BEL
+        "pwm_generate[3].pwm/pwm_q" BEL "pwm_generate[2].pwm/pwm_q" BEL
+        "pwm_generate[1].pwm/pwm_q" BEL "pwm_generate[7].pwm/ctr_q_0" BEL
+        "pwm_generate[7].pwm/ctr_q_1" BEL "pwm_generate[7].pwm/ctr_q_2" BEL
         "clk_BUFGP/BUFG";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;

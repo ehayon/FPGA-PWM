@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Aug 16 20:16:11 2013
+Mapped Date    : Fri Aug 16 22:26:04 2013
 
 Mapping design into LUTs...
 WARNING:MapLib:701 - Signal spi_channel<3> connected to top level port
@@ -63,21 +63,21 @@ Phase 8.5  Local Placement Optimization (Checksum:9ebb847e) REAL time: 6 secs
 Phase 9.8  Global Placement
 ..
 ..
-Phase 9.8  Global Placement (Checksum:1e8b1c93) REAL time: 6 secs 
+Phase 9.8  Global Placement (Checksum:ced4d333) REAL time: 6 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:1e8b1c93) REAL time: 6 secs 
+Phase 10.5  Local Placement Optimization (Checksum:ced4d333) REAL time: 6 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:3428ecd3) REAL time: 7 secs 
+Phase 11.18  Placement Optimization (Checksum:9e5a7023) REAL time: 6 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:3428ecd3) REAL time: 7 secs 
+Phase 12.5  Local Placement Optimization (Checksum:9e5a7023) REAL time: 6 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:3428ecd3) REAL time: 7 secs 
+Phase 13.34  Placement Validation (Checksum:9e5a7023) REAL time: 6 secs 
 
-Total REAL time to Placer completion: 7 secs 
+Total REAL time to Placer completion: 6 secs 
 Total CPU  time to Placer completion: 5 secs 
 Running post-placement packing...
 Writing output files...

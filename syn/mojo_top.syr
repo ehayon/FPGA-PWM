@@ -121,6 +121,14 @@ Elaborating module <mojo_top>.
 WARNING:HDLCompiler:1127 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 18: Assignment to out1 ignored, since the identifier is never used
 
 Elaborating module <pwm(CTR_LEN=3)>.
+WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ethan/fpga/Mojo-Base/src/mojo_top.v" Line 31: Size mismatch in connection of port <compare>. Formal port size is 3-bit while actual signal size is 32-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -198,8 +206,8 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2146 - In block <mojo_top>, Counter <pwm_8/ctr_q> <pwm_7/ctr_q> <pwm_6/ctr_q> <pwm_5/ctr_q> <pwm_4/ctr_q> <pwm_3/ctr_q> <pwm_2/ctr_q> <pwm_1/ctr_q> are equivalent, XST will keep only <pwm_8/ctr_q>.
-WARNING:Xst:1710 - FF/Latch <pwm_1/pwm_q> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2146 - In block <mojo_top>, Counter <pwm_generate[7].pwm/ctr_q> <pwm_generate[6].pwm/ctr_q> <pwm_generate[5].pwm/ctr_q> <pwm_generate[4].pwm/ctr_q> <pwm_generate[3].pwm/ctr_q> <pwm_generate[2].pwm/ctr_q> <pwm_generate[1].pwm/ctr_q> <pwm_generate[0].pwm/ctr_q> are equivalent, XST will keep only <pwm_generate[7].pwm/ctr_q>.
+WARNING:Xst:1710 - FF/Latch <pwm_generate[0].pwm/pwm_q> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <mojo_top> ...
 
@@ -325,18 +333,18 @@ Timing constraint: Default period analysis for Clock 'clk'
   Total number of paths / destination ports: 23 / 10
 -------------------------------------------------------------------------
 Delay:               2.478ns (Levels of Logic = 1)
-  Source:            pwm_8/ctr_q_2 (FF)
-  Destination:       pwm_5/pwm_q (FF)
+  Source:            pwm_generate[7].pwm/ctr_q_2 (FF)
+  Destination:       pwm_generate[4].pwm/pwm_q (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: pwm_8/ctr_q_2 to pwm_5/pwm_q
+  Data Path: pwm_generate[7].pwm/ctr_q_2 to pwm_generate[4].pwm/pwm_q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              8   0.525   0.943  pwm_8/ctr_q_2 (pwm_8/ctr_q_2)
-     INV:I->O              1   0.255   0.681  pwm_5/pwm_d1_INV_0 (pwm_5/pwm_d)
-     FD:D                      0.074          pwm_5/pwm_q
+     FDR:C->Q              8   0.525   0.943  pwm_generate[7].pwm/ctr_q_2 (pwm_generate[7].pwm/ctr_q_2)
+     INV:I->O              1   0.255   0.681  pwm_generate[4].pwm/pwm_d1_INV_0 (pwm_generate[4].pwm/pwm_d)
+     FD:D                      0.074          pwm_generate[4].pwm/pwm_q
     ----------------------------------------
     Total                      2.478ns (0.854ns logic, 1.624ns route)
                                        (34.5% logic, 65.5% route)
@@ -347,16 +355,16 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
 -------------------------------------------------------------------------
 Offset:              3.488ns (Levels of Logic = 2)
   Source:            rst_n (PAD)
-  Destination:       pwm_8/ctr_q_0 (FF)
+  Destination:       pwm_generate[7].pwm/ctr_q_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: rst_n to pwm_8/ctr_q_0
+  Data Path: rst_n to pwm_generate[7].pwm/ctr_q_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
      INV:I->O              3   0.255   0.765  rst1_INV_0 (rst)
-     FDR:R                     0.459          pwm_8/ctr_q_0
+     FDR:R                     0.459          pwm_generate[7].pwm/ctr_q_0
     ----------------------------------------
     Total                      3.488ns (2.042ns logic, 1.446ns route)
                                        (58.5% logic, 41.5% route)
@@ -366,15 +374,15 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 7 / 7
 -------------------------------------------------------------------------
 Offset:              4.118ns (Levels of Logic = 1)
-  Source:            pwm_8/pwm_q (FF)
+  Source:            pwm_generate[7].pwm/pwm_q (FF)
   Destination:       led<7> (PAD)
   Source Clock:      clk rising
 
-  Data Path: pwm_8/pwm_q to led<7>
+  Data Path: pwm_generate[7].pwm/pwm_q to led<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.525   0.681  pwm_8/pwm_q (pwm_8/pwm_q)
+     FD:C->Q               1   0.525   0.681  pwm_generate[7].pwm/pwm_q (pwm_generate[7].pwm/pwm_q)
      OBUF:I->O                 2.912          led_7_OBUF (led<7>)
     ----------------------------------------
     Total                      4.118ns (3.437ns logic, 0.681ns route)
@@ -396,15 +404,15 @@ clk            |    2.478|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.56 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 5.29 secs
  
 --> 
 
 
-Total memory usage is 390720 kilobytes
+Total memory usage is 390728 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 
