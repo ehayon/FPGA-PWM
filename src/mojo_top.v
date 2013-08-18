@@ -23,24 +23,27 @@ assign avr_rx = 1'bz;
 assign spi_channel = 4'bzzzz;
 
 
+
 counter pwm_counter (
 	.clk(clk),
 	.rst(rst),
 	.value(compare)
 );
 
+/*
+pwm #(.CTR_LEN(8)) pwm_led (
+	.rst(rst),
+	.clk(clk),
+	.compare(compare),
+	.pwm(pwm)
+);
+*/
 
-genvar i;
+wave #(.CTR_LEN(25)) led_wave (
+	.rst(rst),
+	.clk(clk),
+	.led(led)
+);
 
-generate
-	for(i=0; i < 8; i=i+1) begin: pwm_generate
-		pwm #(.CTR_LEN(8)) pwm (
-			.rst(rst),
-			.clk(clk),
-			.compare(compare),
-			.pwm(led[i])
-		);
-	end
-endgenerate
 
 endmodule

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    23:53:40 08/16/2013 
+// Create Date:    19:16:32 08/18/2013 
 // Design Name: 
-// Module Name:    counter 
+// Module Name:    wave 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,32 +18,38 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module counter(
-	input clk,
-	input rst,
-	output reg [7:0] value
+module wave #( parameter CTR_LEN = 25 ) (
+	input wire clk,
+	input wire rst,
+	output reg [7:0] led
     );
-	 
-reg [27:0] ctr_q, ctr_d;
+
+reg [CTR_LEN-1 : 0] ctr_d, ctr_q = {CTR_LEN{1'b0}};
+reg [3:0] i;
+reg [7:0] acmp;
+reg [8:0] result;
 
 always @(ctr_q) begin
 	ctr_d = ctr_q + 1'b1;
 	
-	if(ctr_q[27]) begin
-		value = ~ctr_q[26:19];
-	end else begin
-		value = ctr_q[26:19];
+	for (i=0; i<8; i=i+1) begin
+		result = ctr_q[CTR_LEN-1 : CTR_LEN-9] + i * 8'd32;
+		
+		if(result[8])
+			acmp = ~result[7:0];
+		else
+			acmp = result[7:0];
+			
+		led[i] = acmp > ctr_q[7:0];
 	end
 end
 
 always @(posedge clk) begin
-	
 	if(rst) begin
-		ctr_q <= 1'b0;
+		ctr_q <= {CTR_LEN{1'b0}};
 	end else begin
-		ctr_q <= ctr_d;
+		ctr_q <= ctr_d;	
 	end
-	
 end
 
 endmodule
